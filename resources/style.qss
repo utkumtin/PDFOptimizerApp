@@ -1,0 +1,383 @@
+/* ============================================================
+   PDF Optimizer — Apple Human Interface Guidelines stylesheet
+   ============================================================
+   Color palette:
+     Background   #f5f5f7  (Apple light gray)
+     Card         #ffffff
+     Primary      #007aff  (system blue)
+     Success      #34c759  (system green)
+     Warning      #ff9500  (system orange)
+     Danger       #ff3b30  (system red)
+     Text         #1d1d1f
+     Secondary    #6e6e73
+     Tertiary     #8e8e93
+     Border       #e5e5ea
+     Divider      #f2f2f7
+   ============================================================ */
+
+/* --- Global defaults --- */
+QWidget {
+    font-family: -apple-system, "SF Pro Text", "Helvetica Neue", sans-serif;
+    font-size: 13px;
+    color: #1d1d1f;
+}
+
+/* --- Window body --- */
+#windowBody {
+    background-color: #f5f5f7;
+}
+
+/* ============================================================
+   Cards — rounded white containers (like macOS Settings)
+   ============================================================ */
+
+#card {
+    background-color: #ffffff;
+    border: 1px solid #e5e5ea;
+    border-radius: 10px;
+}
+
+#cardSeparator {
+    background-color: #f2f2f7;
+    border: none;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+/* ============================================================
+   Drop Zone
+   ============================================================ */
+
+#dropZone {
+    min-height: 140px;
+}
+
+#dropZone[dragOver="true"] {
+    background-color: #e8f0fe;
+}
+
+#dropIcon {
+    font-size: 36px;
+    color: #8e8e93;
+}
+
+#dropHint {
+    font-size: 14px;
+    color: #8e8e93;
+    font-weight: 400;
+}
+
+#addMoreHint {
+    font-size: 11px;
+    color: #aeaeb2;
+    padding-top: 2px;
+}
+
+/* --- File list rows --- */
+#fileRow {
+    background-color: #f9f9fb;
+    border-radius: 6px;
+}
+
+#fileName {
+    font-size: 13px;
+    color: #1d1d1f;
+}
+
+#fileSize {
+    font-size: 12px;
+    color: #8e8e93;
+}
+
+#fileEstimate {
+    font-size: 11px;
+    color: #34c759;
+    font-weight: 500;
+}
+
+/* --- Trash button --- */
+#trashButton {
+    background-color: transparent;
+    border: none;
+    border-radius: 6px;
+    padding: 0px;
+}
+
+#trashButton:hover {
+    background-color: #ffeeee;
+}
+
+/* ============================================================
+   Quality Selector — segmented control
+   ============================================================ */
+
+#sliderHeader {
+    font-weight: 600;
+    font-size: 13px;
+    color: #1d1d1f;
+}
+
+#presetDescription {
+    font-size: 12px;
+    color: #8e8e93;
+}
+
+/* All quality buttons share this base */
+#qualityButton {
+    background-color: #f2f2f7;
+    color: #1d1d1f;
+    border: 1px solid #d1d1d6;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 0px;
+}
+
+/* Position-based border radius (segmented control look) */
+#qualityButton[position="first"] {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-right: none;
+}
+
+#qualityButton[position="middle"] {
+    border-radius: 0px;
+    border-right: none;
+}
+
+#qualityButton[position="last"] {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+#qualityButton:hover {
+    background-color: #e5e5ea;
+}
+
+/* Selected state */
+#qualityButton:checked {
+    background-color: #007aff;
+    color: #ffffff;
+    border-color: #007aff;
+    font-weight: 600;
+}
+
+/* ============================================================
+   Grayscale Checkbox
+   ============================================================ */
+
+#grayscaleCheckbox {
+    font-size: 13px;
+    color: #1d1d1f;
+    spacing: 8px;
+}
+
+#grayscaleCheckbox::indicator {
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid #c7c7cc;
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+
+#grayscaleCheckbox::indicator:checked {
+    background-color: #007aff;
+    border-color: #007aff;
+}
+
+#grayscaleCheckbox::indicator:hover {
+    border-color: #007aff;
+}
+
+/* ============================================================
+   Buttons
+   ============================================================ */
+
+/* Primary — blue */
+#optimizeButton {
+    background-color: #007aff;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 28px;
+}
+
+#optimizeButton:hover {
+    background-color: #0066d6;
+}
+
+#optimizeButton:pressed {
+    background-color: #004ea2;
+}
+
+#optimizeButton:disabled {
+    background-color: #b0b0b5;
+    color: #ffffff;
+}
+
+/* Cancel — red */
+#cancelButton {
+    background-color: transparent;
+    color: #ff3b30;
+    border: 1.5px solid #ff3b30;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 20px;
+}
+
+#cancelButton:hover {
+    background-color: #fff0ef;
+}
+
+#cancelButton:pressed {
+    background-color: #ffe0de;
+}
+
+/* ============================================================
+   Progress Bar
+   ============================================================ */
+
+QProgressBar, #smoothProgress {
+    height: 6px;
+    background: #e5e5ea;
+    border: none;
+    border-radius: 3px;
+}
+
+QProgressBar::chunk, #smoothProgress::chunk {
+    background: #007aff;
+    border-radius: 3px;
+}
+
+/* ============================================================
+   Status & Size Labels
+   ============================================================ */
+
+#statusLabel {
+    font-size: 12px;
+    color: #8e8e93;
+}
+
+#sizeLabel {
+    font-size: 12px;
+    color: #34c759;
+    font-weight: 500;
+}
+
+#sizeLabel[grew="true"] {
+    color: #ff9500;
+}
+
+/* ============================================================
+   Setup Dialog
+   ============================================================ */
+
+#setupDialog {
+    background-color: #f5f5f7;
+}
+
+#setupHeader {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1d1d1f;
+}
+
+#setupDescription {
+    font-size: 13px;
+    color: #6e6e73;
+    margin-bottom: 8px;
+}
+
+/* --- Dependency rows --- */
+#depRow {
+    background-color: #ffffff;
+    border: 1px solid #e5e5ea;
+    border-radius: 8px;
+}
+
+#depName {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1d1d1f;
+}
+
+#depStatus {
+    font-size: 12px;
+    color: #8e8e93;
+}
+
+#depStatus[found="true"] {
+    color: #34c759;
+}
+
+#depStatus[found="false"] {
+    color: #ff3b30;
+}
+
+#statusIcon {
+    font-size: 16px;
+}
+
+/* --- Install button (green) --- */
+#installButton {
+    background-color: #34c759;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 14px;
+}
+
+#installButton:hover {
+    background-color: #2db84e;
+}
+
+#installButton:disabled {
+    background-color: #b0b0b5;
+    color: #ffffff;
+}
+
+/* --- Re-check / Quit buttons --- */
+#recheckButton {
+    background-color: #e5e5ea;
+    color: #1d1d1f;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 8px 16px;
+}
+
+#recheckButton:hover {
+    background-color: #d1d1d6;
+}
+
+#quitButton {
+    background-color: transparent;
+    color: #8e8e93;
+    border: none;
+    font-size: 13px;
+    padding: 8px 16px;
+}
+
+#quitButton:hover {
+    color: #ff3b30;
+}
+
+/* --- Terminal output --- */
+#terminalOutput {
+    background-color: #1c1c1e;
+    color: #30d158;
+    font-family: "SF Mono", "Menlo", "Monaco", monospace;
+    font-size: 11px;
+    border: 1px solid #38383a;
+    border-radius: 8px;
+    padding: 8px;
+}
