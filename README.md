@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="logo.png" alt="PDF Optimizer" width="128" height="128">
+  <img src="logo.png?v=2" alt="PDF Optimizer" width="128" height="128">
 </p>
 
 <h1 align="center">PDF Optimizer</h1>
