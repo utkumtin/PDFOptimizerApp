@@ -41,7 +41,6 @@ PDF Optimizer reduces the file size of your PDFs by re-compressing images, downs
 - **Size Comparison** — See exactly how much each file shrank (or grew)
 - **Estimated Savings** — Preview expected compression before you start
 - **Auto Dependency Setup** — Automatically installs Homebrew and Ghostscript if missing
-- **Apple-like UI** — Card-based layout following Apple Human Interface Guidelines
 
 ## Installation
 
