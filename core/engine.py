@@ -146,9 +146,9 @@ class GhostscriptWorker(QObject):
         self._cleanup_temp()
         self._finish_with_error("Cancelled by user")
 
-    # ------------------------------------------------------------------
-    # Phase 1 — page count
-    # ------------------------------------------------------------------
+    
+    # Page Count
+    
 
     def _on_count_stdout(self) -> None:
         data = self._count_process.readAllStandardOutput()
@@ -173,9 +173,7 @@ class GhostscriptWorker(QObject):
         # ---> Tiny delay before heavy work — let the UI settle
         QTimer.singleShot(30, self._start_optimization)
 
-    # ------------------------------------------------------------------
-    # Phase 2 — actual optimization
-    # ------------------------------------------------------------------
+    # Actual Optimization
 
     def _start_optimization(self) -> None:
         if self._cancelled:
@@ -265,9 +263,7 @@ class GhostscriptWorker(QObject):
         self._state = self._STATE_IDLE
         self.file_finished.emit(result)
 
-    # ------------------------------------------------------------------
     # Helpers
-    # ------------------------------------------------------------------
 
     def _cleanup_temp(self) -> None:
         if self._temp_path and os.path.exists(self._temp_path):

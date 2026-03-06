@@ -22,9 +22,7 @@ QUALITY_PRESETS = [
 ]
 
 
-# ------------------------------------------------------------------
 # Card container — Apple-style grouped section
-# ------------------------------------------------------------------
 
 class CardWidget(QFrame):
     """A rounded white container that groups related controls, like macOS Settings cards."""
@@ -51,9 +49,7 @@ class CardWidget(QFrame):
         self._layout.addWidget(line)
 
 
-# ------------------------------------------------------------------
 # File list — shows dropped PDF files with size, estimate, trash
-# ------------------------------------------------------------------
 
 class FileListWidget(QWidget):
     """Displays a list of PDF files with estimated savings and a remove button."""
@@ -149,9 +145,7 @@ class FileListWidget(QWidget):
             self._layout.addWidget(row_widget)
 
 
-# ------------------------------------------------------------------
 # Quality selector — segmented toggle buttons
-# ------------------------------------------------------------------
 
 class QualitySelector(QWidget):
     """A row of mutually-exclusive buttons for quality presets (segmented control)."""
@@ -225,9 +219,7 @@ class QualitySelector(QWidget):
         return preset
 
 
-# ------------------------------------------------------------------
 # Grayscale checkbox
-# ------------------------------------------------------------------
 
 class GrayscaleCheckbox(QCheckBox):
     """Toggle for converting PDF to grayscale during optimization."""
@@ -237,9 +229,7 @@ class GrayscaleCheckbox(QCheckBox):
         self.setObjectName("grayscaleCheckbox")
 
 
-# ------------------------------------------------------------------
 # Buttons
-# ------------------------------------------------------------------
 
 class OptimizeButton(QPushButton):
     """Primary action button."""
@@ -262,9 +252,7 @@ class CancelButton(QPushButton):
         self.hide()
 
 
-# ------------------------------------------------------------------
 # Animated progress bar
-# ------------------------------------------------------------------
 
 class SmoothProgressBar(QProgressBar):
     """A progress bar that smoothly animates to the target value.
@@ -296,9 +284,7 @@ class SmoothProgressBar(QProgressBar):
         self.setValue(value)
 
 
-# ------------------------------------------------------------------
 # Progress indicator
-# ------------------------------------------------------------------
 
 class ProgressIndicator(QWidget):
     """Progress bar with status label and accumulating result list."""

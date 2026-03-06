@@ -17,9 +17,7 @@ from core.engine import OptimizationQueue, OptimizationResult
 from core.file_utils import format_file_size
 
 
-# ------------------------------------------------------------------
 # Drop zone — PDF icon + file list with removal
-# ------------------------------------------------------------------
 
 class DropZone(QWidget):
     """A drop target that shows either an empty prompt or a file list."""
@@ -147,9 +145,7 @@ class DropZone(QWidget):
         event.acceptProposedAction()
 
 
-# ------------------------------------------------------------------
 # Main window
-# ------------------------------------------------------------------
 
 class MainWindow(QMainWindow):
     """Primary application window with Apple-like card layout."""
@@ -239,9 +235,7 @@ class MainWindow(QMainWindow):
             y = (geo.height() - self.height()) // 2
             self.move(x, y)
 
-    # ------------------------------------------------------------------
     # File handling
-    # ------------------------------------------------------------------
 
     def _open_file_dialog(self) -> None:
         paths, _ = QFileDialog.getOpenFileNames(
@@ -259,9 +253,7 @@ class MainWindow(QMainWindow):
     def _on_preset_changed(self, preset: str) -> None:
         self.drop_zone.update_preset(preset)
 
-    # ------------------------------------------------------------------
     # Optimization flow
-    # ------------------------------------------------------------------
 
     def _on_optimize_clicked(self) -> None:
         if not self._pending_files or not self.gs_path:
@@ -297,9 +289,7 @@ class MainWindow(QMainWindow):
         if self._queue and self._queue.is_running:
             self._queue.cancel()
 
-    # ------------------------------------------------------------------
     # Queue signal handlers
-    # ------------------------------------------------------------------
 
     def _on_file_started(self, index: int, filename: str) -> None:
         total = self._queue.total_files
@@ -359,9 +349,7 @@ class MainWindow(QMainWindow):
         self.drop_zone.show_empty()
         self.optimize_button.setEnabled(False)
 
-    # ------------------------------------------------------------------
     # UI state
-    # ------------------------------------------------------------------
 
     def _set_processing_state(self, processing: bool) -> None:
         self.optimize_button.setVisible(not processing)

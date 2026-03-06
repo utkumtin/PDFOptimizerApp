@@ -1,8 +1,8 @@
-/* ============================================================
-   PDF Optimizer — Apple Human Interface Guidelines stylesheet
-   ============================================================
+/*
+   PDF Optimizer
+
    Color palette:
-     Background   #f5f5f7  (Apple light gray)
+     Background   #f5f5f7  (light gray)
      Card         #ffffff
      Primary      #007aff  (system blue)
      Success      #34c759  (system green)
@@ -13,7 +13,7 @@
      Tertiary     #8e8e93
      Border       #e5e5ea
      Divider      #f2f2f7
-   ============================================================ */
+*/
 
 /* --- Global defaults --- */
 QWidget {
@@ -27,9 +27,9 @@ QWidget {
     background-color: #f5f5f7;
 }
 
-/* ============================================================
+/*
    Cards — rounded white containers (like macOS Settings)
-   ============================================================ */
+*/
 
 #card {
     background-color: #ffffff;
@@ -44,9 +44,9 @@ QWidget {
     margin-right: 4px;
 }
 
-/* ============================================================
+/*
    Drop Zone
-   ============================================================ */
+*/
 
 #dropZone {
     min-height: 140px;
@@ -107,9 +107,9 @@ QWidget {
     background-color: #ffeeee;
 }
 
-/* ============================================================
+/*
    Quality Selector — segmented control
-   ============================================================ */
+*/
 
 #sliderHeader {
     font-weight: 600;
@@ -165,9 +165,9 @@ QWidget {
     font-weight: 600;
 }
 
-/* ============================================================
+/*
    Grayscale Checkbox
-   ============================================================ */
+*/
 
 #grayscaleCheckbox {
     font-size: 13px;
@@ -192,9 +192,9 @@ QWidget {
     border-color: #007aff;
 }
 
-/* ============================================================
+/*
    Buttons
-   ============================================================ */
+*/
 
 /* Primary — blue */
 #optimizeButton {
@@ -239,9 +239,9 @@ QWidget {
     background-color: #ffe0de;
 }
 
-/* ============================================================
+/*
    Progress Bar
-   ============================================================ */
+*/
 
 QProgressBar, #smoothProgress {
     height: 6px;
@@ -255,9 +255,9 @@ QProgressBar::chunk, #smoothProgress::chunk {
     border-radius: 3px;
 }
 
-/* ============================================================
+/*
    Status & Size Labels
-   ============================================================ */
+*/
 
 #statusLabel {
     font-size: 12px;
@@ -274,9 +274,9 @@ QProgressBar::chunk, #smoothProgress::chunk {
     color: #ff9500;
 }
 
-/* ============================================================
+/*
    Setup Dialog
-   ============================================================ */
+*/
 
 #setupDialog {
     background-color: #f5f5f7;
